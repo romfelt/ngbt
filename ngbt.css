@@ -1,0 +1,79 @@
+
+.jtris-block {
+	position: absolute;
+	opacity: 0.6;
+}
+.jtris-block-0 {
+	background: url('tetris-blocks-3.png') 0 0;
+}
+.jtris-block-1 {
+	background: url('tetris-blocks-3.png') -9px 0;
+}
+.jtris-block-2 {
+	background: url('tetris-blocks-3.png') -18px 0;
+}
+.jtris-block-3 {
+	background: url('tetris-blocks-3.png') -27px 0;
+}
+.jtris-block-4 {
+	background: url('tetris-blocks-3.png') -36px 0;
+}
+.jtris-block-5 {
+	background: url('tetris-blocks-3.png') -45px 0;
+}
+.jtris-block-6 {
+	background: url('tetris-blocks-3.png') -54px 0;
+}
+.jtris-block-7 {
+	background-color: #000;
+}
+.jtris-block-8 {
+	background-color: #000;
+	opacity: 0;
+}
+.jtris-block-9 {  
+	background-color: #000;
+	opacity: 0.5;
+}
+.jtris-block-10 {
+	background-color: #000;
+	opacity: 0.33;
+}
+
+
+.jtris-char {
+	position: absolute;
+        width: 8px;
+        height: 8px;
+	opacity: 0.6;
+}
+.jtris-char-0 {
+	background: url('tetris-blocks-3.png') -1px -10px;
+}
+.jtris-char-1 {
+	background: url('tetris-blocks-3.png') -9px -10px;
+}
+.jtris-char-2 {
+	background: url('tetris-blocks-3.png') -17px -10px;
+}
+.jtris-char-3 {
+	background: url('tetris-blocks-3.png') -25px -10px;
+}
+.jtris-char-4 {
+	background: url('tetris-blocks-3.png') -33px -10px;
+}
+.jtris-char-5 {
+	background: url('tetris-blocks-3.png') -41px -10px;
+}
+.jtris-char-6 {
+	background: url('tetris-blocks-3.png') -49px -10px;
+}
+.jtris-char-7 {
+	background: url('tetris-blocks-3.png') -57px -10px;
+}
+.jtris-char-8 {
+	background: url('tetris-blocks-3.png') -65px -10px;
+}
+.jtris-char-9 {
+	background: url('tetris-blocks-3.png') -73px -10px;
+}

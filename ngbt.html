@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ngbt - a nintendo gameboy inspired tetris version</title>
+	<link rel="stylesheet" type="text/css" href="ngbt.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="jtris.js"></script>
+	<script>
+
+		function initNumberField(id, size, width) {
+			$('#'+id).data('size', size);
+
+			for (var i = 0; i < size; ++i) {
+				var b = $('<div />')
+					.attr('id', id + '-' + i)
+					.attr('class', 'jtris-char')
+					.data('size', size)
+					.css({ left: (size - i) * width });
+
+				if (i == 0) {
+					b.addClass('jtris-char-0');
+				}
+
+				$('#'+id).append(b);
+			}
+		}
+
+		function setNumberField(id, val) {
+			var size = $('#'+id).data('size');
+
+			for (var i = 0; i < size; ++i) {
+				var c = $('#' + id + '-' + i);
+
+				var x = val % 10;
+				val = Math.floor(val / 10);
+
+				c.attr('class', 'jtris-char jtris-char-' + x);
+				if (val == 0)
+					break;
+			}
+		}
+
+		$(document).ready(function() {
+			var settings = {
+				blockSize: 8,
+				field: { border: 0, width: 10, height: 18 },
+				callbacks: {
+					updateScore: function(s) {
+						setNumberField('score', s.score);
+						setNumberField('lines', s.lines);
+						setNumberField('level', s.level);
+					}
+				},
+				events: {
+					left: 'left', 
+					right: 'right', 
+					rotate: null, 
+					drop: null,
+					pause: null
+				}
+			};
+			$('#jtris').jtris(settings);
+			initNumberField('score', 6, 8);
+			initNumberField('lines', 4, 8);
+			initNumberField('level', 4, 8);
+		});
+
+	</script>
+
+	<style type="text/css">
+		
+		#container {
+			position: relative;
+			display: inline-block;
+		}
+
+		#jtris {
+			position: absolute;
+			top: 68px;
+			left: 88px;
+		}
+                
+		#score {
+			position: absolute;
+			top: 93px;
+			left: 169px;
+		}
+
+		#level {
+			position: absolute;
+			top: 125px;
+			left: 177px;
+		}
+
+		#lines {
+			position: absolute;
+			top: 149px;
+			left: 177px;
+		}
+
+		#gamefield {
+			position: absolute;
+			top: 68px;
+			left: 73px;
+			width: 159px;
+			height: 200px;
+			background: url('tetris-blocks-3.png') -1px -18px;
+		}
+
+	</style>
+</head>
+<body>
+	<!--
+		10 blocks width
+
+		https://www.youtube.com/watch?v=BQwohHgrk2s
+		http://www.world-of-nintendo.com/manuals/game_boy/tetris.shtml
+
+	-->
+
+	<map name="buttons" >
+		<area id="left" shape="rect" coords="15,315,55,360">
+		<area id="right" shape="rect" coords="70,315,110,360">
+	</map>
+
+	<div id="container">
+		<img src="gameboy.jpg" width="306" usemap="#buttons">
+		<div id="gamefield" class="jtris-block"></div>
+		<div id="jtris"></div>
+		<div id="score"></div>
+		<div id="level"></div>
+		<div id="lines"></div>
+	</div>
+</body>
+</html>

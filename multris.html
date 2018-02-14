@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>multris - if you think one game is too easy</title>
+	<link rel="stylesheet" type="text/css" href="jtris.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="jtris.js"></script>
+	<script>
+		$(document).ready(function() {
+			var settings = {
+				blockSize: 9,
+				field: { border: 1, width: 12, height: 19 },
+				callbacks: {
+					updateScore: function(s) {}
+				}
+			};
+			$('#jtris').jtris(settings);
+			$('#jtris2').jtris(settings);
+		});
+	</script>
+
+	<style type="text/css">
+		#container {
+			position: relative;
+			display: inline-block;
+		}
+
+		#jtris {
+			position: absolute;
+			top: 20px;
+			left: 100px;
+		}
+		#jtris2 {
+			position: absolute;
+			top: 20px;
+			left: 210px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<!--div id="jtris" style="width: 100%; height: 300px; background-color: #467388;"></div-->
+	<div id="container">
+		<div id="jtris"></div>
+		<div id="jtris2"></div>
+	</div>
+</body>
+</html>

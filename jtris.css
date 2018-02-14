@@ -1,0 +1,48 @@
+
+.jtris-block {
+	position: absolute;
+}
+
+.jtris-block-0 {
+	background-color: #000;
+}
+
+.jtris-block-1 {
+	background-color: #123456;
+}
+
+.jtris-block-2 {
+	background-color: #234567;
+}
+
+.jtris-block-3 {
+	background-color: #345678;
+}
+
+.jtris-block-4 {
+	background-color: #456789;
+}
+
+.jtris-block-5 {
+	background-color: #56789a;
+}
+
+.jtris-block-6 {
+	background-color: #6789ab;
+}
+
+.jtris-block-7 {
+	background-color: #789abc;
+}
+
+.jtris-block-8 {
+	background-color: #89abcd;
+}
+
+.jtris-block-9 {
+	background-color: #9abcde;
+}
+
+.jtris-block-10 {
+	background-color: #fff;
+}

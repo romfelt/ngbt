@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jtris</title>
+	<link rel="stylesheet" type="text/css" href="jtris.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="jtris.js"></script>
+	<script>
+
+		$(document).ready(function() {
+			var settings = {
+				blockSize: 12,
+				callbacks: {
+					updateScore: function(s) { 
+							$('#score').html(s.score);
+							$('#lines').html(s.lines);
+							$('#figures').html(s.figures);
+						}
+				}
+			};
+			$('#jtris').jtris(settings);
+		});
+	</script>
+
+	<style type="text/css">
+
+		#jtris {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+
+		#stats {
+			position: absolute;
+			top: 20px;
+			left: 170px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="jtris"></div>
+	<div id="stats">
+		<div>Score: <span id="score">0</span></div>
+		<div>Lines: <span id="lines">0</span></div>
+		<div>Figures: <span id="figures">0</span></div>
+	</div>
+</body>
+</html>
