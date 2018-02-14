@@ -1,7 +1,7 @@
-# NGBT - Nintendo Gameboy Tetris
+# NGBT - Nintendo Game Boy Tetris
 
-NGBT is a Nintendo Game Boy Tetris clone written in JavaScript. A playable version is available at http://romfelt.se/ngbt.html. 
+NGBT is a Nintendo Game Boy Tetris clone written in JavaScript. The game engine is configurable and can be re-used separetely to create a Tetris with any kind of look and feel.
 
-For a more complex game try http://romfelt.se/multris.html.
+A playable version of NGBT is available at http://romfelt.se/ngbt.html. For a more complex game try http://romfelt.se/multris.html.
 
 Have fun!
